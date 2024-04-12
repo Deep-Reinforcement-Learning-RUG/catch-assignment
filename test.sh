@@ -1,7 +1,9 @@
 #!/bin/bash
 
-# Run the Python script in the background
+# Install the required Python packages
 python3 -m pip install -r requirements.txt
+
+# Run the Python script in the background
 python3 src/main.py &
 
 # Get the process ID of the Python script

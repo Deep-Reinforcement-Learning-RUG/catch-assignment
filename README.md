@@ -16,6 +16,13 @@ This will install all necessary dependencies. The code has been tested with Pyth
 
 Now, you should be able to simply run the `main.py` as any other script.
 
+In order to allow us for easy grading, we implemented
+a simple test that checks wheter your `requirements.txt` file is complete and that your code runs without errors. You can run this test by executing the following command:
+
+```
+source test.sh
+```
+
 ## Tips and Resources
 
 Here are a couple of hints and resources that might help you with in this assignment:
