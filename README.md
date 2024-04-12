@@ -29,12 +29,11 @@ Here are a couple of hints and resources that might help you with in this assign
 
 2. If you have duplicate code in multiple places, it’s probably a bad sign. Maybe you should try it to group that functionality in a seperate function?
 3. The agent should be able to learn using different types of algorithms. Maybe there is a way to make these algorithms easily swappable?
-4. The agent’s implementation is agnostic with regards to the type of bandit it’s interacting with. Maybe that can help with reducing duplicate code.
-5. Type hinting is not required, but it can help your partner understand your code - https://mypy.readthedocs.io/en/stable/cheat_sheet_py3.html
-6. Git workshop by Cover - https://studysupport.svcover.nl/?a=1
-7. YouTube Git tutorial - https://www.youtube.com/watch?v=RGOj5yH7evk
-8. OOP in Python - https://www.youtube.com/watch?v=JeznW_7DlB0
-9. How to document Python? - https://www.datacamp.com/tutorial/docstrings-python4
+4. Type hinting is not required, but it can help your partner understand your code - https://mypy.readthedocs.io/en/stable/cheat_sheet_py3.html
+5. Git workshop by Cover - https://studysupport.svcover.nl/?a=1
+6. YouTube Git tutorial - https://www.youtube.com/watch?v=RGOj5yH7evk
+7. OOP in Python - https://www.youtube.com/watch?v=JeznW_7DlB0
+8. How to document Python? - https://www.datacamp.com/tutorial/docstrings-python4
 
 ## Questions and help
 
