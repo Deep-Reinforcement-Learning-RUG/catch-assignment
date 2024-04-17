@@ -31,7 +31,7 @@ class Agent():
         self.new_state_buffer = np.zeros((self.memory_size, state_dimensions), dtype=np.float32)
         self.action_buffer = np.zeros((self.memory_size, n_actions), dtype=np.int32)
         self.reward_buffer = np.zeros(self.memory_size, dtype=np.float32)
-        self.terminal_buffer = np.zeros(self.memory_size, dtype=np.bool)
+        self.terminal_buffer = np.zeros(self.memory_size, dtype=bool)
 
     def store_transition(
         self,
