@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Install the required Python packages
+# Install the required Python dependencies
 python3 -m pip install -r requirements.txt
 
 # Run the Python script in the background
