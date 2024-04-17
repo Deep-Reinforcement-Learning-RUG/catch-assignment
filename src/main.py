@@ -1,6 +1,3 @@
-import random
-import numpy as np
-
 from environment import CatchEnv
 
 N_EPISODES = 100

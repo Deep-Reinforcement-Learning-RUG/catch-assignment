@@ -32,7 +32,6 @@ class CatchEnv(gym.Env):
         self.ballx, self.bally = self.np_random.integers(self.size), 4
         self.image[self.bally, self.ballx] = 1
         self.image[-5, self.pos - 2 : self.pos + 3] = np.ones(5)
-
         return self.step(2)[0]
 
     def reset(self, **kwargs):
@@ -71,7 +70,7 @@ class CatchEnv(gym.Env):
         reward = int(self.pos - 2 <= self.ballx <= self.pos + 2) if terminal else 0
 
         [
-            self.state.append(resize(self.image, (84, 84)) * 255)
+            self.state.append(resize(self.image, self.output_shape) * 255)
             for _ in range(self.fps - len(self.state) + 1)
         ]
         self.state = self.state[-self.fps :]
@@ -84,16 +83,3 @@ class CatchEnv(gym.Env):
             {},  # empty info
         )
 
-
-if __name__ == "__main__":
-    env = CatchEnv()
-    observation, info = env.reset()
-    for ep in range(1000):
-        action = env.action_space.sample()  # this is where you would insert your policy
-        observation, reward, terminated, truncated, info = env.step(action)
-
-        if reward:
-            print(f"episode {ep} | reward: {reward}")
-
-        if terminated or truncated:
-            observation, info = env.reset()
