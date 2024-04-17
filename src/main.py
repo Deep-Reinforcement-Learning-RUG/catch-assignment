@@ -3,26 +3,28 @@ import numpy as np
 
 from environment import CatchEnv
 
+N_EPISODES = 100
+
 def run_environment():
     """!
     Run the environment with a random agent.
     Make sure to adapt this to train your own implementation.
     """
     env = CatchEnv()
-    number_of_episodes = 1
-
-    for ep in range(number_of_episodes):
-        env.reset()
-
-        state, reward, terminal = env.step(random.randint(0,2))
+    observation, info = env.reset()
+    
+    for ep in range(N_EPISODES):
+        
+        # Choosing a random action instead of an informed one.
+        # This is where you come in!
+        action = env.action_space.sample()
         # You probably want to use these values to train your agent :)
+        observation, reward, terminated, truncated, info = env.step(action)
 
-        while not terminal:
-            state, reward, terminal = env.step(random.randint(0,2))
-            print("Reward obtained by the agent: {}".format(reward))
-            state = np.squeeze(state)
+        print(f"episode {ep} | reward: {reward} | terminated: {bool(terminated)}")
 
-        print("End of the episode")
+        if terminated or truncated:
+            observation, info = env.reset()
 
 
 if __name__ == "__main__":
