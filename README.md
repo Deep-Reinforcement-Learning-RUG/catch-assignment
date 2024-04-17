@@ -4,20 +4,19 @@ In this assignment, you will implement various RL algorithms that learn the game
 
 ## Installation
 
-Before running the code, make sure you properly setup the project:
+Before running the code, make sure you properly install the dependencies:
 
 ```
-python3 setup.py
+python3 -m pip install -r requirements.txt
 ```
 
-This will install all necessary dependencies. The code has been tested with Python 3.11.
+The code has been tested with Python 3.11.
 
 ## Running the code
 
 Now, you should be able to simply run the `main.py` as any other script.
 
-In order to allow us for easy grading, we implemented
-a simple test that checks wheter your `requirements.txt` file is complete and that your code runs without errors. You can run this test by executing the following command:
+In order to allow us for easy grading, we implemented a simple test that checks wheter your `requirements.txt` file is complete and that your code runs without errors. You can run this test by executing the following command:
 
 ```
 source test.sh
