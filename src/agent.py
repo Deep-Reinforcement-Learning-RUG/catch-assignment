@@ -4,12 +4,13 @@ import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
 import numpy as np
+from typing import Tuple
 
 class Agent():
     def __init__(
         self,
         memory_size: int,
-        state_dimensions: int,
+        state_dimensions: Tuple[int, int, int],
         n_actions: int,
         # Add any other arguments you need here
         # e.g. learning rate, discount factor, etc.
@@ -27,8 +28,8 @@ class Agent():
         """
 
         self.memory_size = memory_size
-        self.state_buffer = np.zeros((self.memory_size, state_dimensions), dtype=np.float32)
-        self.new_state_buffer = np.zeros((self.memory_size, state_dimensions), dtype=np.float32)
+        self.state_buffer = np.zeros((self.memory_size, *state_dimensions), dtype=np.float32)
+        self.new_state_buffer = np.zeros((self.memory_size, *state_dimensions), dtype=np.float32)
         self.action_buffer = np.zeros((self.memory_size, n_actions), dtype=np.int32)
         self.reward_buffer = np.zeros(self.memory_size, dtype=np.float32)
         self.terminal_buffer = np.zeros(self.memory_size, dtype=bool)
